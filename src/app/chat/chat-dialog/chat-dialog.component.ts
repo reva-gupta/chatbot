@@ -12,7 +12,7 @@ export class ChatDialogComponent implements OnInit {
   amt1;
   amt2;
   amt3;
-   
+  amt4; 
 				  // first question
   output = document.getElementById('output'); // store id="output" in output variable
 constructor() { }
@@ -60,8 +60,9 @@ constructor() { }
       (<HTMLInputElement>document.getElementById("input")).value = "";   		// clear text box
       } 
       avg()
-      {   var amt4=(this.amt1+this.amt2+this.amt3)/3.0;
-          this.output.innerHTML = '<h1>Average bill amount is ' + amt4 + '</h1>';
+      {      this.amt4=(this.amt1+this.amt2+this.amt3)/3.0;
+        var output = document.getElementById('output');	
+        output.innerHTML = '<h1>Average bill amount is ' + this.amt4 + '</h1>';
           (<HTMLInputElement>document.getElementById("input")).value = "";
       }
   
